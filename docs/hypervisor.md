@@ -8,7 +8,7 @@
   * [1.2. Type-2 or Hosted hypervisors](#type2)
 * [3. References](#ref)
 
-==================================================
+*****************************************
 ## <a name = "def"> 1. និយមន័យ </a>
 **Hypervisor** មានឈ្មោះហៅមួយទៀតថា Virtual Machine Monitor (VMM) ជាពាក្យដែលសំដៅទៅលើ Software, firmware ឫក៏ Hardware ដែលប្រើសំរាប់បង្កើត និងដំណើរការម៉ាសុីននិមិត្ត VM(Virutal Mchines)។
 ```
