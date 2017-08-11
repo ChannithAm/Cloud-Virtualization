@@ -46,5 +46,7 @@ Hypervisorនៅក្នុងក្រុមនេះមានដូចជា�
 ---------------------------------
 [1] https://viblo.asia/p/tan-man-ao-hoa-ai-cung-biet-nhung-cu-the-no-la-gi-Do754NV3ZM6
 
+[2] https://en.wikipedia.org/wiki/Hypervisor
+
 
 
