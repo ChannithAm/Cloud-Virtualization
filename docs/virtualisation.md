@@ -11,6 +11,7 @@ Hypervisor ត្រូវបានបែងចែកជាពីរ
 - Type-2 or Hosted hypervisors
 
 ![Type of hypervisor](images/hpervisor.jpg)
+
 [source](http://www.cbronline.com/what-is/what-is-a-hypervisor-4970622/)
 
 * 1.1. Type-1, Native or Bare-Metal hypervisors
