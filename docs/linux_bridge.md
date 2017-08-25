@@ -2,7 +2,18 @@
 ------------------------------
 
 ## បញ្ជីអត្ថបទ
-
+* [១.​ និយមន័យ](#intro)
+* [២. ធាតុផ្សំរបស់linux bridge](#component)
+* [៣. មុខងារSwitchមួយដែលបង្កើតដោយlinux bridge](#function)
+* [៤. ដំឡើងឧបករណ៍គ្រប់គ្រង linuxbridge នៅលើubuntu 16.04](#install)
+* [៥. Linux bridge command](#command)
+  * [៥.១. ជាទូទៅ](#manpages)
+  * [៥.២. Commandsសំខាន់ៗមួយចំនួន](#useful)
+    * [៥.២.១. Bridge](#bridge)
+    * [៥.២.២. Ports](#port)
+    * [៥.២.៣. Ageing](#ageing)
+    * [៥.២.៤. STP](#stp)
+* [ឯកសាយោង](#ref)
 
 --------------------------------
 ## <a name="intro">១.​ និយមន័យ</a>
