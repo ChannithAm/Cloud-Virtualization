@@ -15,7 +15,7 @@
 - OVSអាចដំណើរការនៅលើ Linux-based, FreeBSD, Windows, non-POSIX embedded Systems,...
 
 ### <a name="feature">១.២. មុខងារ</a>
-**OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាងក្រោម៖**
+OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាងក្រោម៖
   * Standard 802.1Q VLAN model with trunking and access ports
   * NIC bonding with or without LACP on upstream switch
   * NetFlow, sFlow(R), and mirroring for increased visibility
@@ -28,8 +28,23 @@
 
 
 ### <a name="architec">១.៣. ធាតុផ្សំនៃOpen vSwitch</a>
+![OVS architecture](./images/architecture.jpg)
+* Control Plane(user mode):
+  * **ovs-vswitchd** -មានតួនាទីជា​ 1 daemon​ switch ប្រតិបត្តិបញ្ជូនបន្ត(switch) រួមជាមួយmoduleនៅក្នុងLinux kernel សំរាប់flow-based switching
+  * **ovsdb-server** -ជាdatabase serverដែលសំរាប់ovs-vswitchdផ្ទុកswitch configurations
+
+* Kernel Mode:
+  * Kernel module រួមជាមួយ`ovs-vswitchd`សំរាប់packet switching។​ It also does a Fast path switching.
+
+* Command Line Interface:
+  * **ovs-dpctl** -ជាឧបករណ៍(tool)សំរាប់configuring the switch kernel module
+  * **ovs-vsctl** -ប្រើសំរាប់configure the switch, i.e it is use to push configs to OVSDB.
+  * **ovs-appctl** -ប្រើសំរាប់បញ្ជូនcommandsទៅovs-vswithd.
+  * **ovs-ofctl** -ប្រើសំរាប់បញ្ជូនcommandsទៅopenflow module.
 
 ## <a name="ref">ឯកសារយោង</a>
 [1] http://openvswitch.org/slides/ppf.pdf
 
 [2] http://docs.openvswitch.org/en/latest/
+
+[3] http://networkstatic.net/openflow-openvswitch-lab/
