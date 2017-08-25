@@ -28,7 +28,7 @@ OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាង�
 
 
 ### <a name="architec">១.៣. ធាតុផ្សំនៃOpen vSwitch</a>
-![OVS architecture](./images/architecture.jpg)
+![OVS architecture](/images/architecture.jpg)
 * Control Plane(user mode):
   * **ovs-vswitchd** -មានតួនាទីជា​ 1 daemon​ switch ប្រតិបត្តិបញ្ជូនបន្ត(switch) រួមជាមួយmoduleនៅក្នុងLinux kernel សំរាប់flow-based switching
   * **ovsdb-server** -ជាdatabase serverដែលសំរាប់ovs-vswitchdផ្ទុកswitch configurations
