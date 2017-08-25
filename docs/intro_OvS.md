@@ -6,6 +6,6 @@
 --------------------------------
 
 ## <a name="intro">១. ជាទូទៅ</a>
-(http://openvswitch.org/assets/featured-image.jpg)
+![OpenvSwitch](http://openvswitch.org/assets/featured-image.jpg)
 
 
