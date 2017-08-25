@@ -42,9 +42,71 @@ OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាង�
   * **ovs-appctl** -ប្រើសំរាប់បញ្ជូនcommandsទៅovs-vswithd.
   * **ovs-ofctl** -ប្រើសំរាប់បញ្ជូនcommandsទៅopenflow module.
 
+## <a name="install">២.​ ដំឡើង Open vSwitch</a>
+សំរាប់ Debian:
+> sudo apt-get install -y openvswitch-switch openvswitch-common
+
+[!ឫក៏អាចមើលតាមការណែនាំនេះ](http://docs.openvswitch.org/en/latest/intro/install/)
+
+## <a name="command">៣. Commands សំខាន់ៗមួយចំនួន</a>
+យោងទៅតាម http://manpages.ubuntu.com/manpages/xenial/man8/ovs-vsctl.8.html
+### <a name="switch">៣.១. Switch</a>
+- បង្ហាញ virtual switchបច្ចប្បន្ន
+> ovs-vsctl show
+
+or 
+> ovs-vsctl lsit-br
+
+- ថែម ឫលុបVirtual switch
+> ovs-vsctl add-br <switch-name>
+> ovs-vsctl del-br <switch-name>
+
+### <a name="port">៣.២. Ports</a>
+- រាយពត័មានអំពីបណ្ដាportនៅលើ vswitch:
+> ovs-vsctl list-ports <swith-name>
+
+- ថែម ឫលុបport
+> ovs-vsctl add-port <br-name> <ifname>
+> ovs-vsctl del-port <br-name> <ifname>
+
+- Set ប្រភេទអោយport:
+> ovs-vsctl set interface <interface_name> type=<type_name>
+
+type_name: internal, vxlan, gre, etc.
+
+
+- Set VLAN អោយport
+> ovs-vsctl set port <ifname> tag=<vlan-id>
+
+- ថែម port និងset អោយport
+> ovs-vsctl add-port <br-name> <ifname> tag=<vlan-id> -- set interface <ifname> type=<type_name>
+
+- បង្ហាញចេញឈ្មោះរបស់vswitchដែលមានport
+> ovs-vsctl port-to-br <port_name>
+
+### <a name="stp">៣.៣. STP</a>
+- Turn {on|off} STP protocol:
+> ovs-vsctl set Bridge <vswitch> stp_enable=<{true|false}>
+
+- បង្កើតbridge prioriy ដើម្បីជ្រើសរើសroot bridge
+> ovs-vsctl set Bridge <vswitch> other_config:stp-priority=<prio>
+
+- Example:
+> ovs-vsctl set Bridge br0 other_config:stp-priority=0x7800
+
+- បង្កើតport priority ដើម្បីជ្រើសរើសroot port
+> ovs-vsctl set Port <vswitch> other_config:stp-path-cost=<prio>
+
+
 ## <a name="ref">ឯកសារយោង</a>
 [1] http://openvswitch.org/slides/ppf.pdf
 
 [2] http://docs.openvswitch.org/en/latest/
 
 [3] http://networkstatic.net/openflow-openvswitch-lab/
+
+[4] https://www.slideshare.net/yongkikim106/understanding-open-vswitch
+
+[5] https://www.youtube.com/watch?v=rYW7kQRyUvA
+
+[6] https://opennetworkingblog.blogspot.in/2016/06/openvswitch-introduction.html?view=classic
