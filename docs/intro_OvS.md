@@ -90,7 +90,7 @@ ovs-vsctl list-ports <swith-name>
 
 - ថែម ឫលុបport
 ```
-ovs-vsctl add-port '<br-name> <ifname>'
+ovs-vsctl add-port <br-name> <ifname>
 
 ovs-vsctl del-port <br-name> <ifname>
 ```
