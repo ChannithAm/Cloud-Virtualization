@@ -64,10 +64,11 @@ OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាង�
 > ovs-vsctl show
 
 or 
-> ovs-vsctl lsit-br
+> ovs-vsctl list-br
 
 - ថែម ឫលុបVirtual switch
 > ovs-vsctl add-br <switch-name>
+
 > ovs-vsctl del-br <switch-name>
 
 ### <a name="port">៣.២. Ports</a>
@@ -76,6 +77,7 @@ or
 
 - ថែម ឫលុបport
 > ovs-vsctl add-port <br-name> <ifname>
+
 > ovs-vsctl del-port <br-name> <ifname>
 
 - Set ប្រភេទអោយport:
