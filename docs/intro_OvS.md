@@ -60,54 +60,82 @@ OVS ជំនាន់ថ្មីsupportsមុខងារដូចខាង�
 ## <a name="command">៣. Commands សំខាន់ៗមួយចំនួន</a>
 យោងទៅតាម http://manpages.ubuntu.com/manpages/xenial/man8/ovs-vsctl.8.html
 ### <a name="switch">៣.១. Switch</a>
-- បង្ហាញ virtual switchបច្ចប្បន្ន
-> ovs-vsctl show
 
-or 
-> ovs-vsctl list-br
+```
+ចំនាំថា អ្នកត្រូវតែមានសិទ្ទជា super user ទើបអាចដំនើរការcommandsទាំងនេះ!
+```
+
+- បង្ហាញ virtual switchបច្ចប្បន្ន
+```
+ovs-vsctl show
+```
+
+or
+```
+ovs-vsctl list-br
+```
 
 - ថែម ឫលុបVirtual switch
-> ovs-vsctl add-br <switch-name>
+```
+ovs-vsctl add-br <switch-name>
 
-> ovs-vsctl del-br <switch-name>
+ovs-vsctl del-br <switch-name>
+```
 
 ### <a name="port">៣.២. Ports</a>
 - រាយពត័មានអំពីបណ្ដាportនៅលើ vswitch:
-> ovs-vsctl list-ports <swith-name>
+```
+ovs-vsctl list-ports <swith-name>
+```
 
 - ថែម ឫលុបport
-> ovs-vsctl add-port <br-name> <ifname>
+```
+ovs-vsctl add-port '<br-name> <ifname>'
 
-> ovs-vsctl del-port <br-name> <ifname>
+ovs-vsctl del-port <br-name> <ifname>
+```
 
 - Set ប្រភេទអោយport:
-> ovs-vsctl set interface <interface_name> type=<type_name>
+```
+ovs-vsctl set interface <interface_name> type=<type_name>
+```
 
 type_name: internal, vxlan, gre, etc.
 
 
 - Set VLAN អោយport
-> ovs-vsctl set port <ifname> tag=<vlan-id>
+```
+ovs-vsctl set port <ifname> tag=<vlan-id>
+```
 
 - ថែម port និងset អោយport
-> ovs-vsctl add-port <br-name> <ifname> tag=<vlan-id> -- set interface <ifname> type=<type_name>
+```
+ovs-vsctl add-port <br-name> <ifname> tag=<vlan-id> -- set interface <ifname> type=<type_name>
+```
 
 - បង្ហាញចេញឈ្មោះរបស់vswitchដែលមានport
-> ovs-vsctl port-to-br <port_name>
+```
+ovs-vsctl port-to-br <port_name>
+```
 
 ### <a name="stp">៣.៣. STP</a>
 - Turn {on|off} STP protocol:
-> ovs-vsctl set Bridge <vswitch> stp_enable=<{true|false}>
+```
+ovs-vsctl set Bridge <vswitch> stp_enable=<{true|false}>
+```
 
 - បង្កើតbridge prioriy ដើម្បីជ្រើសរើសroot bridge
-> ovs-vsctl set Bridge <vswitch> other_config:stp-priority=<prio>
+```
+ovs-vsctl set Bridge <vswitch> other_config:stp-priority=<prio>
+```
 
 - Example:
 > ovs-vsctl set Bridge br0 other_config:stp-priority=0x7800
 
 - បង្កើតport priority ដើម្បីជ្រើសរើសroot port
-> ovs-vsctl set Port <vswitch> other_config:stp-path-cost=<prio>
-
+```
+ovs-vsctl set Port <vswitch> other_config:stp-path-cost=<prio>
+```
 
 ## <a name="ref">៤.​ ឯកសារយោង</a>
 [1] http://openvswitch.org/slides/ppf.pdf
