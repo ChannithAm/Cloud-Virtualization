@@ -47,8 +47,11 @@
 ពេលនេះយើងអាច `ping google.com` បានហើយ។
 * មកដល់ដំណាក់កាលនេះយើងបង្កើតtap 2 សំរាប់ភ្ជាប់ទៅនឹងVM
 > ip tuntap add mode tap vport1
+
 > ip tuntap add mode tap vport2
+
 > ifconfig vport1 up
+
 > ifconfig vport2 up
 
   * ពិនិត្យមើល
