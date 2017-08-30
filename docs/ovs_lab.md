@@ -31,6 +31,7 @@
 > ovs-vsctl show
 
 មកដល់ពេលនេះphysical machine មិនអាចមានទំនាក់ទំនងទៅInternetខាងក្រៅបានទេ។​ 
+
 ![ovs2](/images/ovs_lab2.jpg)
 
   * ដើម្បីដោះស្រាយបញ្ហានេះ យើងត្រូវធ្វើដូចខាងក្រោម៖
