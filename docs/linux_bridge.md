@@ -53,39 +53,59 @@ $sudo apt-get install bridge-utils
 > brctl show
 
 - Add, delete virtual switch:
-> brctl addbr <brname>
-> brctl delbr <brname>
+```
+brctl addbr <brname>
+brctl delbr <brname>
+```
 
 #### <a name="port">៥.២.២. Ports</a>
 - Show  information on the bridge
-> brctl show <brname>
+```
+brctl show <brname>
+```
 
 - Add, delete port:
-> brctl addif <brname> <ifname>		# ifname: interface name of port <brname>
-> brctl delif <brname> <ifname>
+```
+brctl addif <brname> <ifname>		# ifname: interface name of port <brname>
+brctl delif <brname> <ifname>
+```
 
 #### <a name="ageing">៥.២.៣. Ageing</a>
 - Show forwarding table of bridge:
-> brctl showmacs <brname>
+```
+brctl showmacs <brname>
+```
 
 - Set RTT:
-> brctl setageing <brname> <time>
+```
+brctl setageing <brname> <time>
+```
 
 #### <a name="stp">៥.២.៤. STP</a>
 - Show bridge stp info:
->brctl showstp <bridge>
+```
+brctl showstp <bridge>
+```
 
 - Turn {on|off}} spanning tree protocol:
-> brctl stp <bridge> {on|off}
+```
+brctl stp <bridge> {on|off}
+```
 
 - Set bridge forward delay:
-> brctl setfd <bridge> <time>
+```
+brctl setfd <bridge> <time>
+```
 
 - Set bridge prioriy ដើម្បីជ្រើសរើស root bridge:
-> brctl setbridgeprio <bridge> <prio>
+```
+brctl setbridgeprio <bridge> <prio>
+```
 
 - Set port prioriy ដើម្បីជ្រើសរើស root port:
-> brctl setportprio <bridge> <port> <prio>
+```
+brctl setportprio <bridge> <port> <prio>
+```
 
 -----------------------------
 To Do,

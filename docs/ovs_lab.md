@@ -45,6 +45,7 @@
 > route -n 		# ពិនិត្យមើលrouting table
 
 ពេលនេះយើងអាច `ping google.com` បានហើយ។
+ក្នុងករណី ping 8.8.8.8 បានតែមិនអាច ping google.com អ្នកត្រូវប្រើcommandនេះ `sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf`
 * មកដល់ដំណាក់កាលនេះយើងបង្កើតtap 2 សំរាប់ភ្ជាប់ទៅនឹងVM
 > ip tuntap add mode tap vport1
 
@@ -70,3 +71,8 @@
 > ovs-vsctl fdb/show br0
 
 > ovs-ofctl show br0
+
+
+## You can read more in the folowing lab
+
+http://networkstatic.net/openflow-openvswitch-lab/
