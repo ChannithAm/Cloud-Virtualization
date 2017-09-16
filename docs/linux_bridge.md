@@ -22,7 +22,7 @@
 - Linux bridge ជា`kernel module`មួយ។
 
 ## <a name="component">២. ធាតុផ្សំរបស់linux bridge</a>
-(https://camo.githubusercontent.com/3de8817e61ac39ed01b25ba615169155745191a9/687474703a2f2f692e696d6775722e636f6d2f786f62376c6a512e706e67)
+![element](https://camo.githubusercontent.com/3de8817e61ac39ed01b25ba615169155745191a9/687474703a2f2f692e696d6775722e636f6d2f786f62376c6a512e706e67)
 
 ធាតុផ្សំរបស់linux​ bridgeមានដូចរូបខាងលើ។ ហើយខាងក្រោមនេះគឺជាសញ្ញាណមួយចំនួនទាក់ទងទៅនឹងlinux bridge៖
   * **Port**:​ ស្រដៀងគ្នានឹងportរបស់switchពិត
