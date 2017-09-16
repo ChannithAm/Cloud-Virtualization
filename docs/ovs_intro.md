@@ -137,6 +137,9 @@ ovs-vsctl set Bridge <vswitch> other_config:stp-priority=<prio>
 ```
 ovs-vsctl set Port <vswitch> other_config:stp-path-cost=<prio>
 ```
+-----------------------------------
+
+## [Lab](./ovs_lab.md)
 
 ## <a name="ref">៤.​ ឯកសារយោង</a>
 [1] http://openvswitch.org/slides/ppf.pdf
