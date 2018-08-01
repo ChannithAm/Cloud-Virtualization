@@ -4,6 +4,15 @@
 
 Cloud-Virtualization
 
+# TO DO
+
+- [] Kernel-base Virtual Machine (KVM)
+  - [] ស្វែងយល់ពី KVM
+  - [] ដំឡើង KVM
+  - [] Configure Network Bridge
+  - [] Creae a KVM virtual machine
+  - [] Manage virtual machine in KVM
+
 
 # បញ្ជីអត្ថបទ
 
@@ -12,3 +21,8 @@ Cloud-Virtualization
 * [3. មេរៀនណែនាំអំពី Linux bridge](./docs/linux_bridge.md)
 * [4. អត្ថបទស្ដីអំពី**Open vSwitch**](./docs/ovs_intro.md)
 
+# ឯកសារយោង
+
+[1] https://github.com/retspen/webvirtmgr/wiki/Setup-Host-Server
+
+[2] https://github.com/hocchudong/thuctap012017/tree/master/TVBO
